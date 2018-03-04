@@ -42,7 +42,8 @@ public class UDPServer : MonoBehaviour
 			recvData = new byte[1024];  
 			recvLen = socket.ReceiveFrom(recvData, ref clientEnd);
 			recvStr = Encoding.UTF8.GetString(recvData, 0, recvLen);  
-			Debug.Log("UDP_RECEIVE MESSAGE FROM OPENBCI");
+			//Debug.Log("UDP_RECEIVE MESSAGE FROM OPENBCI");
+			Debug.Log(recvStr);
 		}  
 	}  
 
