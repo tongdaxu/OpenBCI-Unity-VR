@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ParticlePlexus.cs" />
+     <Compile Include="Assets\ParticleSeek.cs" />
      <Compile Include="Assets\Scripts\EmotionEmitter.cs" />
      <Compile Include="Assets\Scripts\textView.cs" />
      <Compile Include="Assets\Scripts\UDPServer.cs" />
