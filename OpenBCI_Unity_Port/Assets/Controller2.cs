@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Controller2 : MonoBehaviour {
 
+	public ParticleBehaviour2 s1;
+	public ParticleBehaviour2 s2;
+
 	void Start () {
 
 		ParticleBehaviour2.G2_emissionRate = 100f;
@@ -15,6 +18,8 @@ public class Controller2 : MonoBehaviour {
 	
 
 	void Update () {
+
+		s1.G2_shift = s2.G2_shift + 0.5f;
 
 		ParticleBehaviour2.G2_speed = ParticleBehaviour2.G2_speed + Random.Range (-0.1f, 0.1f);
 		ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate+ 0.1f;
