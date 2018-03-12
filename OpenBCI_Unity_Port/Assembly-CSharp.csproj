@@ -51,9 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Controller.cs" />
+     <Compile Include="Assets\Controller2.cs" />
      <Compile Include="Assets\ExampleClass.cs" />
-     <Compile Include="Assets\ParticleBehaviour.cs" />
+     <Compile Include="Assets\Line1.cs" />
+     <Compile Include="Assets\ParticleBehaviour1.cs" />
+     <Compile Include="Assets\ParticleBehaviour2.cs" />
+     <Compile Include="Assets\ParticleBehaviour3.cs" />
      <Compile Include="Assets\ParticlePlexus.cs" />
      <Compile Include="Assets\ParticleSeek.cs" />
      <Compile Include="Assets\Scripts\EmotionEmitter.cs" />
