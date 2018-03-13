@@ -23,8 +23,9 @@ public class ParticleBehaviour2 : MonoBehaviour {
 	Gradient grad = new Gradient();
 
 	void Start () {
-
+		
 		exhaust = GetComponent<ParticleSystem>();
+
 	}
 	
 	void Update () {
@@ -36,7 +37,7 @@ public class ParticleBehaviour2 : MonoBehaviour {
 		exhaust.transform.Rotate (0f, 0f, G2_rotate) ;
 		main.startSpeed = G2_speed;
 
-		grad.SetKeys( new GradientColorKey[] { new GradientColorKey(Color.HSVToRGB(G2_color_1 + G2_shift, 1f, 1f), 0.0f), new GradientColorKey(Color.HSVToRGB(G2_color_1 + G2_shift, 1f, 1f), 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 0f) } );
+		grad.SetKeys( new GradientColorKey[] { new GradientColorKey(Color.HSVToRGB(G2_color_1, 1f, 1f), 0.0f), new GradientColorKey(Color.HSVToRGB(G2_color_1+ 0.5f, 1f, 1f), 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 0f) } );
 		col.color = grad;
 	
 	}

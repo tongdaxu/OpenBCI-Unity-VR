@@ -7,7 +7,12 @@ public class G2Decision : MonoBehaviour, Decision
 
     public float[] Decide(List<float> state, List<Camera> observation, float reward, bool done, float[] memory)
     {
-        return new float[0];
+        
+		float[] action = new float[4];
+		for (int i = 0; i < 4; i++) {
+			action[i] = Random.Range(-1f, 1f);
+		}
+		return action;
 
     }
 
