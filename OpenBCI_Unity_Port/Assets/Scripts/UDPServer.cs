@@ -11,6 +11,9 @@ public class UDPServer : MonoBehaviour
 	public string ipAddress = "127.0.0.1";  
 	public int ConnectPort = 12345;  
 	public static string recvStr;
+	public static float arosualValue;
+	public static float valenceValue;
+	public static bool railed;
 
 	Socket socket;  
 	EndPoint clientEnd;  
@@ -33,6 +36,9 @@ public class UDPServer : MonoBehaviour
 		//开启一个线程连接  
 		connectThread = new Thread(new ThreadStart(SocketReceive));  
 		connectThread.Start();  
+		arosualValue = 0.1f;
+		valenceValue = 0.1f;
+		railed = false;
 	}  
 
 	void SocketReceive()  
@@ -42,8 +48,22 @@ public class UDPServer : MonoBehaviour
 			recvData = new byte[1024];  
 			recvLen = socket.ReceiveFrom(recvData, ref clientEnd);
 			recvStr = Encoding.UTF8.GetString(recvData, 0, recvLen);  
-			//Debug.Log("UDP_RECEIVE MESSAGE FROM OPENBCI");
-			Debug.Log(recvStr);
+			string[] tempArray = recvStr.Split (',');
+
+			if (float.Parse (tempArray [0]) * float.Parse (tempArray [1]) < 0.0000001f) {
+			
+				railed = true;
+				Debug.Log ("railed, please adjust the headset");
+			
+			} else {
+				
+				railed = false;
+				arosualValue = float.Parse(tempArray [0]);
+				valenceValue = float.Parse(tempArray [1]);
+				Debug.Log("Arosual = " + arosualValue + ", Valence = " + valenceValue);
+						
+			}
+
 		}  
 	}  
 

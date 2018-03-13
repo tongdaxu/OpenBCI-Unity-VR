@@ -8,7 +8,6 @@ public class ParticleBehaviour2 : MonoBehaviour {
 
 	public static float G2_emissionRate;
 	public static float G2_rotate;
-	public static float G2_translate;
 	public static float G2_speed;
 
 	public float G2_shift;
@@ -35,7 +34,6 @@ public class ParticleBehaviour2 : MonoBehaviour {
 
 		exhaust.emissionRate = G2_emissionRate;
 		exhaust.transform.Rotate (0f, 0f, G2_rotate) ;
-		exhaust.transform.Translate (0f, 0f, G2_translate);
 		main.startSpeed = G2_speed;
 
 		grad.SetKeys( new GradientColorKey[] { new GradientColorKey(Color.HSVToRGB(G2_color_1 + G2_shift, 1f, 1f), 0.0f), new GradientColorKey(Color.HSVToRGB(G2_color_1 + G2_shift, 1f, 1f), 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(1.0f, 0f) } );

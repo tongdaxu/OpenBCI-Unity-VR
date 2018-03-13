@@ -70,3 +70,4 @@ C:\Git\OpenBCI_Unity_VR_Ready\OpenBCI_Unity_Port\Temp\bin\Debug\UnityEditor.iOS.
 C:\Git\OpenBCI_Unity_VR_Ready\OpenBCI_Unity_Port\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Git\OpenBCI_Unity_VR_Ready\OpenBCI_Unity_Port\obj\Debug\Assembly-CSharp.dll
 C:\Git\OpenBCI_Unity_VR_Ready\OpenBCI_Unity_Port\obj\Debug\Assembly-CSharp.pdb
+C:\Git\OpenBCI_Unity_VR_Ready\OpenBCI_Unity_Port\Temp\bin\Debug\Newtonsoft.Json.dll
