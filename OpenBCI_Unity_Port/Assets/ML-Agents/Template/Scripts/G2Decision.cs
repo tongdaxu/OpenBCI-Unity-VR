@@ -9,7 +9,7 @@ public class G2Decision : MonoBehaviour, Decision
     {
         
 		float[] action = new float[4];
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 3; i++) {
 			action[i] = Random.Range(-1f, 1f);
 		}
 		return action;
