@@ -51,10 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AnimatorMove.cs" />
      <Compile Include="Assets\Controller1.cs" />
      <Compile Include="Assets\Controller2.cs" />
      <Compile Include="Assets\Controller3.cs" />
+     <Compile Include="Assets\ControllerG1.cs" />
      <Compile Include="Assets\ExampleClass.cs" />
+     <Compile Include="Assets\G1Con.cs" />
+     <Compile Include="Assets\G1SController.cs" />
+     <Compile Include="Assets\lightControl.cs" />
      <Compile Include="Assets\Line1.cs" />
      <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAcademy.cs" />
      <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DAgent.cs" />
@@ -121,6 +126,15 @@
      <Compile Include="Assets\Scripts\EmotionEmitter.cs" />
      <Compile Include="Assets\Scripts\textView.cs" />
      <Compile Include="Assets\Scripts\UDPServer.cs" />
+     <Compile Include="Assets\Scripts\waveControler.cs" />
+     <Compile Include="Assets\StylizedWaterShader\Code\WaterReflection.cs" />
+     <Compile Include="Assets\StylizedWaterShader\MobileVersion\EnableCameraDepthInForward.cs" />
+     <None Include="Assets\StylizedWaterShader\VFX\VFXResources\VFXWater.shader" />
+     <None Include="Assets\StylizedWaterShader\MobileVersion\Shader\StylizedWaterMobile.shader" />
+     <None Include="Assets\StylizedWaterShader\Example\Materials\foliage.shader" />
+     <None Include="Assets\StylizedWaterShader\Shaders\VFXWater.shader" />
+     <None Include="Assets\StylizedWaterShader\Shaders\StylizedWater.shader" />
+     <None Include="Assets\StylizedWaterShader\MobileVersion\README.txt" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
