@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class G2Agent : Agent {
-	
+
+	private float alphaPast;
+		
 	public override List<float> CollectState()
 	{
 		List<float> state = new List<float>();
 
-		state.Add (UDPServer.arosualValue);
-		state.Add (UDPServer.valenceValue);
+		state.Add (UDPServer.alphaValue);
 		state.Add (ParticleBehaviour2.G2_color_1);
 		state.Add (ParticleBehaviour2.G2_emissionRate);
 		state.Add (ParticleBehaviour2.G2_rotate);
@@ -55,13 +56,13 @@ public class G2Agent : Agent {
 
 
 
+			Debug.Log (UDPServer.alphaValue == UDPServer.alphaValuePast);
 
-			if (UDPServer.arosualValue > -1 && UDPServer.valenceValue > -1) {
+			if ( UDPServer.alphaValue/UDPServer.alphaValuePast > 1.1f ) {
 				done = true;
 				reward = -1.0f;
 			}
 				
-
 			if (done == false)
 			{
 				reward = 0.1f;

@@ -10,8 +10,7 @@ public class G1Agent : Agent {
 	{
 		List<float> state = new List<float>();
 
-		state.Add (UDPServer.arosualValue);
-		state.Add (UDPServer.valenceValue);
+
 		state.Add (ParticleBehaviour1.G1_color);
 		state.Add (ParticleBehaviour1.G1_emissionRate);
 		state.Add (ParticleBehaviour1.G1_rotate);

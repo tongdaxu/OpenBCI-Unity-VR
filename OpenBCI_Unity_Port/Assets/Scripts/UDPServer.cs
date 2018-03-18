@@ -13,6 +13,9 @@ public class UDPServer : MonoBehaviour
 	public static string recvStr;
 	public static float arosualValue;
 	public static float valenceValue;
+
+	public static float alphaValue;
+	public static float alphaValuePast;
 	public static bool railed;
 
 	Socket socket;  
@@ -38,6 +41,7 @@ public class UDPServer : MonoBehaviour
 		connectThread.Start();  
 		arosualValue = 0.1f;
 		valenceValue = 0.1f;
+		alphaValue = 0.0f;
 		railed = false;
 	}  
 
@@ -49,21 +53,9 @@ public class UDPServer : MonoBehaviour
 			recvLen = socket.ReceiveFrom(recvData, ref clientEnd);
 			recvStr = Encoding.UTF8.GetString(recvData, 0, recvLen);  
 			string[] tempArray = recvStr.Split (',');
-
-			if (float.Parse (tempArray [0]) * float.Parse (tempArray [1]) < 0.0000001f) {
-			
-				railed = true;
-				Debug.Log ("railed, please adjust the headset");
-			
-			} else {
-				
-				railed = false;
-				arosualValue = float.Parse(tempArray [0]);
-				valenceValue = float.Parse(tempArray [1]);
-				Debug.Log("Arosual = " + arosualValue + ", Valence = " + valenceValue);
-						
-			}
-
+			alphaValuePast = alphaValue;
+			alphaValue = float.Parse (recvStr);
+		
 		}  
 	}  
 

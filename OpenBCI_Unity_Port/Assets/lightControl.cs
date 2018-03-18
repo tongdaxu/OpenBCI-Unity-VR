@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class lightControl : MonoBehaviour {
 
-	public float timeFlow;
+	public static float timeFlow;
 	private Light sunLight;
 
 	// Use this for initialization
@@ -19,7 +19,7 @@ public class lightControl : MonoBehaviour {
 
 		sunLight.transform.Rotate (timeFlow, 0f, 0f);
 
-		Debug.Log (sunLight.transform.rotation.x);
+		//Debug.Log (sunLight.transform.rotation.x);
 
 		if (Mathf.Abs (sunLight.transform.rotation.x) < 0.8f) {
 

@@ -10,10 +10,10 @@ public class G3Agent : Agent {
 	{
 		List<float> state = new List<float>();
 
-		state.Add (UDPServer.arosualValue);
-		state.Add (UDPServer.valenceValue);
+		state.Add (UDPServer.alphaValue);
 		state.Add (ParticleBehaviour3.G3_emissionRate);
 		state.Add (ParticleBehaviour3.G3_speed);
+		state.Add (lightControl.timeFlow);
 
 		return state;
 	}
@@ -24,17 +24,42 @@ public class G3Agent : Agent {
 
 			float emissionAction = act [0];
 			float speedAction = act [1];
+			float timeflowAction = act [2];
 
 			if (System.Math.Abs (emissionAction) < 1.0f) {
-				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate + emissionAction/50f  ;
-			} else {
+				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate + emissionAction / 50f;
+			} else if (emissionAction >= 1.0f) {
 				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate + 0.02f;			
+			} else {
+				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate + 0.02f;
 			}
 
+
 			if (System.Math.Abs (speedAction) < 1.0f) {
-				ParticleBehaviour2.G2_speed = ParticleBehaviour2.G2_speed + speedAction/10f  ;
-			} else {
+				ParticleBehaviour2.G2_speed = ParticleBehaviour2.G2_speed + speedAction / 10f;
+			} else if (speedAction >= 1.0f) {
 				ParticleBehaviour2.G2_speed = ParticleBehaviour2.G2_speed + 0.1f;			
+			} else {
+				ParticleBehaviour2.G2_speed = ParticleBehaviour2.G2_speed - 0.1f;
+			}
+
+
+			if (System.Math.Abs (timeflowAction) < 1.0f) {
+				lightControl.timeFlow = 2*timeflowAction;
+			} else if (timeflowAction >= 1.0f) {
+				lightControl.timeFlow = 2.0f;			
+			} else {
+				lightControl.timeFlow = -2.0f;
+			}
+
+			if ( UDPServer.alphaValue/UDPServer.alphaValuePast < 0.9f ) {
+				done = true;
+				reward = -1.0f;
+			}
+
+			if (done == false)
+			{
+				reward = 0.1f;
 			}
 
 		}
