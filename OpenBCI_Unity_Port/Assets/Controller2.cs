@@ -13,7 +13,6 @@ public class Controller2 : MonoBehaviour {
 		ParticleBehaviour2.G2_rotate = 0f;
 		ParticleBehaviour2.G2_color_1 = 0.2f;
 		ParticleBehaviour2.G2_speed = 10f;
-		s2.G2_shift = s1.G2_shift + 0.3f;
 
 	}
 	

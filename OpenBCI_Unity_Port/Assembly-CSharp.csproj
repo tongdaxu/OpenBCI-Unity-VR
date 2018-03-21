@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AnimatorMove.cs" />
-     <Compile Include="Assets\Controller1.cs" />
      <Compile Include="Assets\Controller2.cs" />
      <Compile Include="Assets\Controller3.cs" />
      <Compile Include="Assets\ControllerG1.cs" />
@@ -106,8 +105,6 @@
      <Compile Include="Assets\ML-Agents\Scripts\ExternalCommunicator.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\Monitor.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
-     <Compile Include="Assets\ML-Agents\Template\Scripts\G1Academy.cs" />
-     <Compile Include="Assets\ML-Agents\Template\Scripts\G1Agent.cs" />
      <Compile Include="Assets\ML-Agents\Template\Scripts\G1Decision.cs" />
      <Compile Include="Assets\ML-Agents\Template\Scripts\G2Academy.cs" />
      <Compile Include="Assets\ML-Agents\Template\Scripts\G2Agent.cs" />

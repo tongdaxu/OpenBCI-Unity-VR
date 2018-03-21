@@ -31,7 +31,7 @@ public class G3Agent : Agent {
 			} else if (emissionAction >= 1.0f) {
 				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate + 0.02f;			
 			} else {
-				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate + 0.02f;
+				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate - 0.02f;
 			}
 
 
@@ -51,6 +51,12 @@ public class G3Agent : Agent {
 			} else {
 				lightControl.timeFlow = -2.0f;
 			}
+
+			if (ParticleBehaviour2.G2_emissionRate < 0f) {
+				done = true;
+				reward = -0.1f;
+			}
+
 
 			if ( UDPServer.alphaValue/UDPServer.alphaValuePast < 0.9f ) {
 				done = true;

@@ -70,10 +70,10 @@ Material:
     - _TurbulenceScale: 15.53
     - _VertexOffset: 0
     - _WaveDistortionIntensity: 0.59
-    - _WavesAmplitude: 3.74
+    - _WavesAmplitude: 5
     - _WavesDirection: 77
-    - _WavesIntensity: 1.97
-    - _WavesSpeed: 1
+    - _WavesIntensity: 10
+    - _WavesSpeed: 5.09
     m_Colors:
     - _DepthGradient1: {r: 0, g: 0.6397059, b: 0.50735295, a: 1}
     - _DepthGradient2: {r: 0, g: 0.15466529, b: 0.36764705, a: 1}
