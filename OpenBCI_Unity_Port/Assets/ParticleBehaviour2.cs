@@ -26,8 +26,8 @@ public class ParticleBehaviour2 : MonoBehaviour {
 		
 		var col = exhaust.colorOverLifetime;
 		var main = exhaust.main;
-		G2_color_1 = (float)(G2_color_1 - System.Math.Floor (G2_color_1));
 
+		G2_color_1 = (float)(G2_color_1 - System.Math.Floor (G2_color_1));
 		exhaust.emissionRate = G2_emissionRate;
 		exhaust.transform.Rotate (0f, 0f, G2_rotate) ;
 		main.startSpeed = G2_speed;

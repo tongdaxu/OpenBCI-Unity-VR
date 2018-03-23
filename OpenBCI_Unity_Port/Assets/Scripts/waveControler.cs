@@ -9,14 +9,19 @@ using UnityEditor.Rendering;
 public class waveControler : MonoBehaviour {
 
     public Material waterMat;
+    public static float waveSpeed;
+    public static float waveIntensity;
 
 	// Use this for initialization
 	void Start () {
-		waterMat = new Material(Shader.Find("StylizedWater"));
+		waveSpeed = 10;
+		waveIntensity = 10;
+		//waterMat = new Material(Shader.Find("StylizedWater"));
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    
+    // Update is called once per frame
+    void Update () {
+        waterMat.SetFloat("_WavesSpeed", waveSpeed);
+        waterMat.SetFloat("_WavesIntensity", waveIntensity);
+    }
 }

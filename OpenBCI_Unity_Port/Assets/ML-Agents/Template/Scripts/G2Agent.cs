@@ -83,7 +83,7 @@ public class G2Agent : Agent {
 			}
 
 
-			if ( UDPServer.alphaValue/UDPServer.alphaValuePast > 1.1f ) {
+			if ( UDPServer.alphaValue/UDPServer.alphaValuePast < 0.9f ) {
 				done = true;
 				reward = -1.0f;
 			}
@@ -92,8 +92,6 @@ public class G2Agent : Agent {
 			{
 				reward = 0.1f;
 			}
-
-
 
 
 		}

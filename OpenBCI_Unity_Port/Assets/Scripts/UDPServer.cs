@@ -55,6 +55,7 @@ public class UDPServer : MonoBehaviour
 			string[] tempArray = recvStr.Split (',');
 			alphaValuePast = alphaValue;
 			alphaValue = float.Parse (recvStr);
+			Debug.Log (recvStr);
 		
 		}  
 	}  

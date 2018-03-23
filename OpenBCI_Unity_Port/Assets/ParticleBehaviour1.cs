@@ -5,8 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 
 public class ParticleBehaviour1 : MonoBehaviour {
-
-
+	
 	public static float G1_color_1;
 	ParticleSystem exhaust;
 	Gradient grad = new Gradient();
@@ -21,7 +20,6 @@ public class ParticleBehaviour1 : MonoBehaviour {
 
 		var col = exhaust.colorOverLifetime;
 		var main = exhaust.main;
-
 
 		G1_color_1 = (float)(G1_color_1 - System.Math.Truncate (G1_color_1));
 		exhaust.emissionRate = ParticleBehaviour2.G2_emissionRate;

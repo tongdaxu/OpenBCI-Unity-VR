@@ -7,8 +7,8 @@ public class G3Decision : MonoBehaviour, Decision
 
     public float[] Decide(List<float> state, List<Camera> observation, float reward, bool done, float[] memory)
     {
-		float[] action = new float[3];
-		for (int i = 0; i < 3; i++) {
+		float[] action = new float[5];
+		for (int i = 0; i < 5; i++) {
 			action[i] = Random.Range(-1f, 1f);
 		}
 		return action;
