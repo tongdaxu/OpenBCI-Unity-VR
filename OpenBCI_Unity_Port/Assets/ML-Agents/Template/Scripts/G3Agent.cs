@@ -30,6 +30,15 @@ public class G3Agent : Agent {
 			float waveIntAction = act [3];
 			float waveSpeedAction = act [4];
 
+			// if need a random group
+
+			emissionAction = Random.Range (0, 1);
+			speedAction = Random.Range (0, 1);
+			timeflowAction = Random.Range (0, 1);
+			waveIntAction = Random.Range (0, 1);
+			waveSpeedAction = Random.Range (0, 1);
+
+
 			if (System.Math.Abs (emissionAction) < 1.0f) {
 				ParticleBehaviour2.G2_emissionRate = ParticleBehaviour2.G2_emissionRate + emissionAction / 50f;
 			} else if (emissionAction >= 1.0f) {
@@ -78,11 +87,21 @@ public class G3Agent : Agent {
 				reward = -0.1f;
 			}
 
+			//Alpha wave down, avoid alphavalve go up
+			/*
+			if ( UDPServer.alphaValue/UDPServer.alphaValuePast > 1.1f ) {
+				done = true;
+				reward = -1.0f;
+			}
+			*/
+
+			//Alpha wave up, avoid alphavalve go down
 
 			if ( UDPServer.alphaValue/UDPServer.alphaValuePast < 0.9f ) {
 				done = true;
 				reward = -1.0f;
 			}
+
 
 			if (done == false)
 			{

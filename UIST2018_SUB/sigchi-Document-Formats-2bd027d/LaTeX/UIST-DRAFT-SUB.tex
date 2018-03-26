@@ -153,31 +153,34 @@
 \maketitle
 
 \begin{abstract}
-  UPDATED---\today. This sample paper describes the formatting
-  requirements for SIGCHI conference proceedings, and offers
-  recommendations on writing for the worldwide SIGCHI
-  readership. Please review this document even if you have submitted
-  to SIGCHI conferences before, as some format details have changed
-  relative to previous years. Abstracts should be about 150 words and
-  are required.
+  Brain-computer Interface (BCI) has been adopted in virtual reality for active control and assistive monitor device for a long time. While limited light falls upon the potential of passive BCI as an intuitive interaction method. In this paper, we propose an agent controlled BCI-based Virtual Environment (VE). It bases on the passive BCI method and targets at changing mental state of people. Under the environment, the reinforcement learning (RL) agent reads and records the mind state of user and learn to change mind of user towards a pre-defined direction by changing the VE implicitly. During the process the VE evolves as RL agent learns from EEG feedback without active human effort. The system proposed a natural, intuitive application of passive BCI and justifies the adoption of BCI for healthy people. This opensource system is affordable for commercial VR users. And Preliminary test shows it is generally effective.
 \end{abstract}
 
+\category{H.5.2.}{User Interfaces}{Interaction styles} 
 \category{H.5.1.}{Multimedia Information Systems}{Artificial, augmented, and virtual realities} 
-\category{See
-  \url{http://acm.org/about/class/1998/} for the full list of ACM
-  classifiers. This section is required.}{}{}
 
-\keywords{\plainkeywords}
+\keywords{Brain-computer Interface; Implicit Interaction; Virtual Reality; Reinforcement Learning;}
 
 \section{Introduction}
 
-This format is to be used for submissions that are published in the
-conference proceedings. We wish to give this volume a consistent,
-high-quality appearance. We therefore ask that authors follow some
-simple guidelines. You should format your paper exactly like this
-document. The easiest way to do this is to replace the content with
-your own material.  This document describes how to prepare your
-submissions using \LaTeX.
+Although the idea of reading Electroencephalogram (EEG) could be traced back to 1929 [21]. The concept of brain-computer interface (BCI) was not proposed until early 1970s [20]. Initially it was adopted to restore independence of people suffering from neural pathways diseases. Since it could bypass the normal output of brain such as peripheral nerves and read signals directly [22].
+
+As the cost and complexity of BCI falls drastically In recent years, it has been freed from the original exclusive medical definition [22]. Instead of a “ non-muscular communication and control channel for neuromuscular disabilities” [21], BCI has expanded to serve the communication need of healthy people [22]. 
+
+In recent decades research groups have been bridging BCI and virtual reality (VR) [9]. The purposes are: 1) using BCI as an input in virtual world and 2) using VR to provide safe experiment environment [3]. The adopt of BCI as input generally involves active input such as Motor Imagery (MI) [9]: People could be trained control objects [11] or navigate [6] in Virtual Environment (VE) via mental state. Besides, BCI researchers also endorse experiments conducted in VE for safety and flexibility reason.
+
+Despite those accomplishments, there are several limitations about current BCI-VR system: 1) The method is still inherited from BCI for disability. It is not indispensable for healthy people 2) The active BCI requires an complex acquisition process [21] and training to maintain. Initially defined as a "skill", it violates the natural, intuitive and easy to learn principle of interaction [10] 3) Multi-channel inputs are hard to handle. It is easy to press “A” and “UP” button at the same time on the game-pad, while almost impossible for mental state. 
+
+To solve the problems, we propose that the passive BCI should be adopted instead of its active counterpart in VR. Recent scholars propose the concept of passive BCI and classify brain-computer interface into three types: active, reactive and passive [22, 23]. Active BCI is the interface which is directly and consciously controlled by users. While passive BCI is the interface which changes in cognition resulting from interaction state without any additional effort. It is currently used for implicit HCI as an assistive parametric [18]. With several promising prototypes, scholars agree it has the potential as a new type of interaction [22]. 
+
+In this paper, we describe a passive BCI-based interactive virtual environment. Instead of controlling avatars, the objection of interaction is mediating mind state of user without active control. It is composed of a virtual environment, a reinforcement learning (RL) agent and an EEG input device. 
+
+When interacting: 1) Initially, no instruction or training is needed. 2) During the process, the user does not intend to interact nor translate signals [22]. The multi-channel mind state of user (such as band power, emotion parametric) is captured by EEG device and recorded by RL agent. 3) The RL agent feedback to the virtual environment context at a predefined mental target (such as arousal up or alpha band-power down) 4) Synchronously, the RL agent update its policy function (the pattern of reaction to a certain state) towards the mental target.
+
+Compared with current application of BCI in VR, our system 1) connects interaction with physiological or mental target (such as beta wave down) which could not be easily substituted by other inputs 2) proposes an application of BCI caters the need for natural, intuitive interaction in VR [10] 3) is able to handle multi-channel passive information although impossible for active information. 
+
+Then we produce two example scenes with the system. Preliminary user tests with example scenes suggest that although varies from people to people, the system is generally usable and effective.
+
 
 \section{Page Size and Columns}
 On each page your material should fit within a rectangle of 7 $\times$
